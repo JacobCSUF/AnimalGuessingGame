@@ -1,0 +1,3 @@
+f f right NEW_LINE_IND 
+n n right right NEW_LINE_IND 
+n n right right right NEW_LINE_IND 
