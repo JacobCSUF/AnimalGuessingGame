@@ -1,3 +1,48 @@
-f f right NEW_LINE_IND 
-n n right right NEW_LINE_IND 
-n n right right right NEW_LINE_IND 
+right NEW_LINE_IND Shark Does_it_swim 
+right right NEW_LINE_IND swan does_it_fly 
+left NEW_LINE_IND bear Is_it_a_wild_animal 
+left right NEW_LINE_IND cow Does_it_live_on_a_farm 
+left right right NEW_LINE_IND cat It_likes_to_climb_on_things 
+left left NEW_LINE_IND tiger Does_it_have_striped_fur 
+left left right NEW_LINE_IND Lion It_has_a_thick_mane 
+left left right right NEW_LINE_IND panther Is_it_slim_and_fast 
+left left right right left NEW_LINE_IND leopard Does_it_have_spotted_fur 
+left left right right left left NEW_LINE_IND cheetah It_has_a_snack_flavored_after_it 
+left left right right right NEW_LINE_IND elephant Do_humans_ride_this_animal 
+left left right right right right NEW_LINE_IND polar bear 
+left left right right right right right NEW_LINE_IND Turtle Does_it_snap_food_quickly 
+right left NEW_LINE_IND Crocodile Its_friendly_with_humans 
+left left right right left right NEW_LINE_IND rabbit Does_it_like_carrots 
+left left right right right right right right NEW_LINE_IND Porcupin It_has_spikes 
+right right left NEW_LINE_IND hen Do_people_eat_this_animal 
+right right left right NEW_LINE_IND Pigeon Does_it_have_a_small_neck 
+right right left right left NEW_LINE_IND crow Is_its_beak_pretty_big 
+left left right right left right right NEW_LINE_IND frog Does_it_go_in_water? 
+right left right NEW_LINE_IND Whale It_it_one_of_the_biggest_ocean_creaters 
+right right left right left left NEW_LINE_IND Eagle Is_it_a_symbol_of_pride 
+right right right NEW_LINE_IND Ostrich Is_it_very_fast 
+left left right right left right right right NEW_LINE_IND fox Does_there_fur_change_with_the_season 
+left right left NEW_LINE_IND goat Does_it_baa 
+left left right right right right right right right NEW_LINE_IND armadillo Does_it_have_haed_plates_covering_it 
+right left right right NEW_LINE_IND Eel Does_it_have_a_snake_like_body 
+right right left right left right NEW_LINE_IND goose Does_it_rhyme_with_moose 
+left left right right left right right right left NEW_LINE_IND wolf Is_it_closely_tied_to_dogs 
+left left right right right right right right right right NEW_LINE_IND Orangatang Does_it_climb_on_trees 
+left left right right right right right right right right right NEW_LINE_IND Antelope Does_it_have_horns 
+right right left right left right right NEW_LINE_IND Bat Does_it_like_the_dark 
+left left left NEW_LINE_IND badger does_it_rhyme_with_Badger 
+left left right right right right right right right right right right NEW_LINE_IND giraffe Does_it_have_a_long_neck 
+right right right right NEW_LINE_IND hermitcrab Does_it_have_a_shell 
+left left left right NEW_LINE_IND Panda Does_it_like_bamboo 
+right right right left NEW_LINE_IND cobra Did_u_make_up_this_animal 
+right left right right left NEW_LINE_IND Cobra Does_it_have_venemous_bites 
+left left right right left right right right right NEW_LINE_IND Lizard Does_it_have_scales 
+left left right right right left NEW_LINE_IND Camel Does_it_have_a_hump 
+right right left right left right right right NEW_LINE_IND Hawk Does_it_rhyme_with_hawk 
+left left right right right right right right right right right left NEW_LINE_IND Deer Does_it_help_santa 
+left left right right right right right right left NEW_LINE_IND Chameleon Does_it_camouflage 
+left left right right right right right left NEW_LINE_IND Hippo Does_it_have_big_teeth 
+left left right right left left right NEW_LINE_IND Jaguar A_roller_coaster_is_named_it_at_knotts_berry_farm 
+left left right right right right right right right right left NEW_LINE_IND Koloa Is_it_pretty_small_and_slow 
+left left right right right right right right right right right right right NEW_LINE_IND kangaroo Does_it_have_a_pouch
+left left right right left right right right right right NEW_LINE_IND monkey Does_it_climb_on_trees 

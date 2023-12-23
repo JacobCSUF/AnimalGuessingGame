@@ -40,14 +40,53 @@ class Animal_Tree {
     
     
     void load_data(){
-        std::ifstream database{ "data.txt" };
-
+        
+        std::ifstream path_desript{ "data.txt" };
+        if(!path_desript.good()){
+            return;
+        }
         std::shared_ptr curr = root_;
+        
+        std::string info;
+        while (path_desript){
+        path_desript >> info;
+       data_in.push_back(info);
+
+        if(!path_desript.good()){
+            return;
+        }
+        }
+
+        for (int i = 0; i < data_in.size(); i++){
+
+       
+        if ( (data_in.at(i)== "right") && (curr->right_child_!= nullptr)){
+            curr = curr->right_child_;
+        }
+
+        if ((data_in.at(i) == "left") && (curr->left_child_!= nullptr)){
+            curr = curr->left_child_;
+        }
+
+;
+        if (data_in.at(i) == "NEW_LINE_IND"){
+
+            if (curr->left_child_ != nullptr){
+                add(data_in.at(i+1), data_in.at(i+2), curr, "right");
+            }
+            else {
+                 add(data_in.at(i+1), data_in.at(i+2), curr, "left");
+            }
+
+            curr = root_;
+        }
+
+
 
 
     }
     
-    
+    }
     
     
     
@@ -75,9 +114,9 @@ class Animal_Tree {
 
 
    void question(){
-        std::cout << "*******************************************************" << '\n';
+        std::cout << "****************************************************" << '\n';
         std::cout << "Think of an animal and I will try to guess it" << '\n';
-        std::cout << "*******************************************************" << '\n';
+        std::cout << "****************************************************" << '\n';
         bool traverse = true;
         std::shared_ptr curr = root_;
        
@@ -97,7 +136,7 @@ class Animal_Tree {
             std::cin >> answer;
 
              if (answer == "y"){
-           std::cout << "IT WAS FUN GUESSING" << '\n';
+           std::cout << "I KNEW IT. THANKS FOR PLAYING!" << '\n';
             return;
             }
             else
@@ -112,8 +151,7 @@ class Animal_Tree {
 
                     //INPUTING DATA ON DATABASE
                  
-                  data.push_back(new_animal);
-                  data.push_back(new_quest);
+                 
                   
                     
                     for(auto move : path){
@@ -125,12 +163,15 @@ class Animal_Tree {
                     data.push_back("left");
                         }
                     }
+                     data.push_back("NEW_LINE_IND");
+                     data.push_back(new_animal);
+                     data.push_back(new_quest);
                     
-                    data.push_back("NEW_LINE_IND");
                    
                     
 
                     add(new_animal, new_quest, curr, "left");
+                    std::cout << "***Animal and question added to game***" << '\n';
                     return;
                     }
 
@@ -160,8 +201,7 @@ class Animal_Tree {
                     path.push_back(false);
 
                     //release path into database
-                  data.push_back(new_animal);
-                  data.push_back(new_quest);
+                
                   
                     
                     for(auto move : path){
@@ -173,7 +213,11 @@ class Animal_Tree {
                     data.push_back("left");
                         }
                     }
+                    
                     data.push_back("NEW_LINE_IND");
+                    data.push_back(new_animal);
+                    data.push_back(new_quest);
+                    
 
 
                     std::string direction = "right";
@@ -182,6 +226,7 @@ class Animal_Tree {
                     }
                     
                     add(new_animal, new_quest, curr, direction);
+                    std::cout << "***Animal and question added to game***" << '\n';
                     return;
                     }
                     curr = curr->right_child_;
@@ -232,7 +277,7 @@ class Animal_Tree {
 
      
    
-   
+   std::vector<std::string> data_in;
    std::vector<std::string> data;
     private:
 
