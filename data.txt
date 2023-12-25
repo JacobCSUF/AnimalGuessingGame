@@ -1,48 +1,62 @@
-right NEW_LINE_IND Shark Does_it_swim 
-right right NEW_LINE_IND swan does_it_fly 
-left NEW_LINE_IND bear Is_it_a_wild_animal 
-left right NEW_LINE_IND cow Does_it_live_on_a_farm 
-left right right NEW_LINE_IND cat It_likes_to_climb_on_things 
-left left NEW_LINE_IND tiger Does_it_have_striped_fur 
-left left right NEW_LINE_IND Lion It_has_a_thick_mane 
-left left right right NEW_LINE_IND panther Is_it_slim_and_fast 
-left left right right left NEW_LINE_IND leopard Does_it_have_spotted_fur 
-left left right right left left NEW_LINE_IND cheetah It_has_a_snack_flavored_after_it 
-left left right right right NEW_LINE_IND elephant Do_humans_ride_this_animal 
-left left right right right right NEW_LINE_IND polar bear 
-left left right right right right right NEW_LINE_IND Turtle Does_it_snap_food_quickly 
-right left NEW_LINE_IND Crocodile Its_friendly_with_humans 
-left left right right left right NEW_LINE_IND rabbit Does_it_like_carrots 
-left left right right right right right right NEW_LINE_IND Porcupin It_has_spikes 
-right right left NEW_LINE_IND hen Do_people_eat_this_animal 
-right right left right NEW_LINE_IND Pigeon Does_it_have_a_small_neck 
-right right left right left NEW_LINE_IND crow Is_its_beak_pretty_big 
-left left right right left right right NEW_LINE_IND frog Does_it_go_in_water? 
-right left right NEW_LINE_IND Whale It_it_one_of_the_biggest_ocean_creaters 
-right right left right left left NEW_LINE_IND Eagle Is_it_a_symbol_of_pride 
+left NEW_LINE_IND Hippo Is_it_a_fierce_predator 
+left right NEW_LINE_IND Dog Does_it_have__fur 
+left right left NEW_LINE_IND Monkey Do_they_like_to_climb_alot 
+left left NEW_LINE_IND Cheetah Do_they_have__soft_fur 
+left right left right NEW_LINE_IND Goat Can_they_have_horns 
+left right left left NEW_LINE_IND Cat Are_they_a_common_house_pet 
+left right right NEW_LINE_IND Horse Do_we_ride_it 
+right NEW_LINE_IND Shark Can_it_only_breath_in_water 
+right right NEW_LINE_IND Bird Can_it_fly
+right right left NEW_LINE_IND Pigeon Is_their_head_usually_dark/black 
+right right left left NEW_LINE_IND crow Are_they__somewhat_spooky
+right left NEW_LINE_IND Dolphin Are_they_safe_to_be_around 
+left left left NEW_LINE_IND Bear Are_usually_black/dark_in_color
+left left left right NEW_LINE_IND Tiger Is_it_covered_in_stripes 
+left left left right right NEW_LINE_IND Lion Do_they_have_a_big_head 
+left left left left NEW_LINE_IND Panther Are_they_related_to_cats 
+left right right left NEW_LINE_IND Elephant Do_they_have_tusks 
+left right right right NEW_LINE_IND turtle Does_it_have_a_shell 
+left left right NEW_LINE_IND Crocodile Does_it_have_scales 
+left right left right right NEW_LINE_IND Rabbit Can_they_live_in_burrows 
+left right right right right NEW_LINE_IND Porcupin Do_they_have_a_normal_tounge 
+left right right right right right NEW_LINE_IND Frog Are_they_slimy 
+right left left NEW_LINE_IND Whale Are_they_the_biggest_ocean_creatures 
+right right left right NEW_LINE_IND Eagle Are_they_a_symbol_of_America 
+left right left left right NEW_LINE_IND Squirl Do_they_have_big_fluffy_tails 
 right right right NEW_LINE_IND Ostrich Is_it_very_fast 
-left left right right left right right right NEW_LINE_IND fox Does_there_fur_change_with_the_season 
-left right left NEW_LINE_IND goat Does_it_baa 
-left left right right right right right right right NEW_LINE_IND armadillo Does_it_have_haed_plates_covering_it 
-right left right right NEW_LINE_IND Eel Does_it_have_a_snake_like_body 
-right right left right left right NEW_LINE_IND goose Does_it_rhyme_with_moose 
-left left right right left right right right left NEW_LINE_IND wolf Is_it_closely_tied_to_dogs 
-left left right right right right right right right right NEW_LINE_IND Orangatang Does_it_climb_on_trees 
-left left right right right right right right right right right NEW_LINE_IND Antelope Does_it_have_horns 
-right right left right left right right NEW_LINE_IND Bat Does_it_like_the_dark 
-left left left NEW_LINE_IND badger does_it_rhyme_with_Badger 
-left left right right right right right right right right right right NEW_LINE_IND giraffe Does_it_have_a_long_neck 
-right right right right NEW_LINE_IND hermitcrab Does_it_have_a_shell 
-left left left right NEW_LINE_IND Panda Does_it_like_bamboo 
-right right right left NEW_LINE_IND cobra Did_u_make_up_this_animal 
-right left right right left NEW_LINE_IND Cobra Does_it_have_venemous_bites 
-left left right right left right right right right NEW_LINE_IND Lizard Does_it_have_scales 
-left left right right right left NEW_LINE_IND Camel Does_it_have_a_hump 
-right right left right left right right right NEW_LINE_IND Hawk Does_it_rhyme_with_hawk 
-left left right right right right right right right right right left NEW_LINE_IND Deer Does_it_help_santa 
-left left right right right right right right left NEW_LINE_IND Chameleon Does_it_camouflage 
-left left right right right right right left NEW_LINE_IND Hippo Does_it_have_big_teeth 
-left left right right left left right NEW_LINE_IND Jaguar A_roller_coaster_is_named_it_at_knotts_berry_farm 
-left left right right right right right right right right left NEW_LINE_IND Koloa Is_it_pretty_small_and_slow 
-left left right right right right right right right right right right right NEW_LINE_IND kangaroo Does_it_have_a_pouch
-left left right right left right right right right right NEW_LINE_IND monkey Does_it_climb_on_trees 
+left right left right right left NEW_LINE_IND Fox Does_it_have_normal_sized_tail 
+left right right right left NEW_LINE_IND Armadillo Do_they_only_live_on_land 
+right left right NEW_LINE_IND Eel Is_it_posiones 
+right right left right right NEW_LINE_IND Goose Do_we_not_usually_eat_them 
+left left left right right right NEW_LINE_IND Wolf Are_they_related_to_dogs 
+left right left left right right NEW_LINE_IND Gorilla Are_they_very_big 
+left right left right right left right NEW_LINE_IND Beaver Do_they_live_near_water 
+left right left left right right left NEW_LINE_IND Orangutan Are_they_slow 
+left right left right left NEW_LINE_IND Antelope Do_people_hunt_them_usually 
+right right left left left NEW_LINE_IND Bat Do_they_live_in_the_dark 
+left right left right right left left NEW_LINE_IND Badger Do_they_have_a_stripe_on_their_head 
+left right left right right right NEW_LINE_IND Giraffe Do_they_mainly_eat_plants 
+right right right right NEW_LINE_IND crab Does_it_live_on_water_and_land 
+left right left left right right left left NEW_LINE_IND Panda Do_they_like_bamboo 
+left right left right right left right right NEW_LINE_IND Hamster Is_it_a_common_house_pet 
+right right right left NEW_LINE_IND Cobra Does_it_have_venom 
+left right left right right right left NEW_LINE_IND Camel Do_people_ride_them 
+right right left left right NEW_LINE_IND Hawk Does_it_rhyme_with_block 
+left right left right right right left right NEW_LINE_IND Deer Is_it_related_to_christmas 
+left right right right right right right NEW_LINE_IND Chameleon Do_they_have_weird_looking_eyes 
+left left left right right right right NEW_LINE_IND Jaguar Is_it_the_name_of_a_car 
+left right left left right right right NEW_LINE_IND Koala Are_they_considered_slow 
+left right left right right right left right right NEW_LINE_IND Kangaroo Does_it_hop 
+left right right right right right right right NEW_LINE_IND Iguana Are_they_big_for_a_reptile 
+left right left right right right left right right right NEW_LINE_IND Llama Does_it_spit_alot 
+right left right left NEW_LINE_IND Jellyfish Does_it_have_tentacles 
+left left right right NEW_LINE_IND Rhino Does_it_have_horns 
+left right left left right right right right NEW_LINE_IND Possum Are_they_a_rodent 
+left right left right right right left right right right right NEW_LINE_IND Sheep Are_they_usually_white 
+left right left left right right right right left NEW_LINE_IND Mouse Is_it_in_the_name_of_disney's_mascot 
+left right left right right right right NEW_LINE_IND Otter Do_they_swim 
+left right left left right right right left NEW_LINE_IND Sloth Are_their_ears_hidden 
+right right left left left left NEW_LINE_IND Owl Do_they_hoot 
+right right left right right left NEW_LINE_IND Flamingo Are_they_bright_colored 
+left right right right right left NEW_LINE_IND Pig Is_it_pink 
+right right left right right left left NEW_LINE_IND Peacock Are_they_very_brightly_colored 
