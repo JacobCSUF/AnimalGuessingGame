@@ -60,25 +60,28 @@ class Animal_Tree {
     }
   }
 
- //Adds an animal and a question to the tree
-  void add(std::string animal, std::string question, std::shared_ptr<Node> node,
-           std::string direction) {
-    if (direction == "left") {
-      node->right_child_ = std::make_shared<Node>(node->value_);
-      node->value_ = question;
-      node->left_child_ = std::make_shared<Node>(animal);
-      node->right_child_->animal = true;
-      node->left_child_->animal = true;
-      node->animal = false;
-    }
+//Save any new questions/animals it learned during current session onto text file for future session
+ void put_new_questions_in_data_base(){
+  std::ofstream text_file{"data.txt"};
 
-    else if (direction == "right") {
-      node->right_child_ = std::make_shared<Node>(question);
-      node->right_child_->left_child_ = std::make_shared<Node>(animal);
-      node->right_child_->left_child_->animal = true;
+  int newline_ind = 0;
+  for (auto text : data) {
+    text_file << text << " ";
+    if (text == "NEW_LINE_IND") {
+      newline_ind += 1;
+    } else if (newline_ind == 1) {
+      newline_ind += 1;
+    } else if (newline_ind == 2) {
+      text_file << '\n';
+      newline_ind = 0;
     }
   }
+ }
 
+ 
+
+ 
+ 
  //Main function of the tree which asks users to think of an animal
   void question() {
     std::cout << "****************************************************" << '\n';
@@ -133,14 +136,14 @@ class Animal_Tree {
     }
   }
 
-  // returns root node
-  std::shared_ptr<Node> root() { return root_; }
 
-  std::vector<std::string> data_in;
-  std::vector<std::string> data;
+
+
 
  private:
   std::shared_ptr<Node> root_ = nullptr;
+  std::vector<std::string> data_in;
+  std::vector<std::string> data;
  
 
   // helper functions
@@ -173,7 +176,7 @@ class Animal_Tree {
       } else {
         data.push_back("left");
       }
-    }
+    } 
 
     data.push_back("NEW_LINE_IND");
     data.push_back(animal);
@@ -181,5 +184,27 @@ class Animal_Tree {
 
     add(animal, question, node, direction);
     std::cout << "***Animal and question added to game***" << '\n';
+  }
+
+  
+ 
+
+ //Adds an animal and a question to the tree
+  void add(std::string animal, std::string question, std::shared_ptr<Node> node,
+           std::string direction) {
+    if (direction == "left") {
+      node->right_child_ = std::make_shared<Node>(node->value_);
+      node->value_ = question;
+      node->left_child_ = std::make_shared<Node>(animal);
+      node->right_child_->animal = true;
+      node->left_child_->animal = true;
+      node->animal = false;
+    }
+
+    else if (direction == "right") {
+      node->right_child_ = std::make_shared<Node>(question);
+      node->right_child_->left_child_ = std::make_shared<Node>(animal);
+      node->right_child_->left_child_->animal = true;
+    }
   }
 };
