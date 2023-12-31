@@ -1,16 +1,16 @@
 left NEW_LINE_IND Hippo Is_it_a_fierce_predator 
 left right NEW_LINE_IND Dog Does_it_have__fur 
-left right left NEW_LINE_IND Monkey Do_they_like_to_climb_alot 
+left right left NEW_LINE_IND Monkey Do_they_like_to_climb 
 left left NEW_LINE_IND Cheetah Do_they_have__soft_fur 
 left right left right NEW_LINE_IND Goat Can_they_have_horns 
 left right left left NEW_LINE_IND Cat Are_they_a_common_house_pet 
 left right right NEW_LINE_IND Horse Do_we_ride_it 
 right NEW_LINE_IND Shark Can_it_only_breath_in_water 
-right right NEW_LINE_IND Bird Can_it_fly
+right right NEW_LINE_IND Bird Can_it_fly 
 right right left NEW_LINE_IND Pigeon Is_their_head_usually_dark/black 
-right right left left NEW_LINE_IND crow Are_they__somewhat_spooky
+right right left left NEW_LINE_IND crow Are_they__somewhat_spooky 
 right left NEW_LINE_IND Dolphin Are_they_safe_to_be_around 
-left left left NEW_LINE_IND Bear Are_usually_black/dark_in_color
+left left left NEW_LINE_IND Bear Are_usually_black/dark_in_color 
 left left left right NEW_LINE_IND Tiger Is_it_covered_in_stripes 
 left left left right right NEW_LINE_IND Lion Do_they_have_a_big_head 
 left left left left NEW_LINE_IND Panther Are_they_related_to_cats 
@@ -60,3 +60,4 @@ right right left left left left NEW_LINE_IND Owl Do_they_hoot
 right right left right right left NEW_LINE_IND Flamingo Are_they_bright_colored 
 left right right right right left NEW_LINE_IND Pig Is_it_pink 
 right right left right right left left NEW_LINE_IND Peacock Are_they_very_brightly_colored 
+

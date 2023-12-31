@@ -19,15 +19,14 @@ class Node {
 
 class Animal_Tree {
  public:
- 
- //Initializes tree with a question and an animal
+  // Initializes tree with a question and an animal
   Animal_Tree(std::string animal, std::string question) {
     root_ = std::make_shared<Node>(question);
     root_->left_child_ = std::make_shared<Node>(animal);
     root_->left_child_->animal = true;
   }
 
- //Loads the tree with information from a text file
+  // Loads the tree with information from a text file
   void load_data() {
     std::ifstream path_desript{"data.txt"};
 
@@ -38,6 +37,12 @@ class Animal_Tree {
       path_desript >> info;
 
       data_in.push_back(info);
+    }
+
+    if (data_in.size() != 0) {
+      for (int i = 0; i < data_in.size(); i++) {
+        data.push_back(data_in.at(i));
+      }
     }
 
     for (int i = 0; i < data_in.size(); i++) {
@@ -60,39 +65,40 @@ class Animal_Tree {
     }
   }
 
-//Save any new questions/animals it learned during current session onto text file for future session
- void put_new_questions_in_data_base(){
-  std::ofstream text_file{"data.txt"};
+  // Save any new questions/animals it learned during current session onto text
+  // file for future session
+  void put_new_questions_in_data_base() {
+    std::ofstream text_file{"data.txt"};
+    if (data_in.size() != 0) {
+      for (int i = 0; i > data_in.size(); i++) {
+        data.push_back(data_in.at(i));
+      }
+    }
 
-  int newline_ind = 0;
-  for (auto text : data) {
-    text_file << text << " ";
-    if (text == "NEW_LINE_IND") {
-      newline_ind += 1;
-    } else if (newline_ind == 1) {
-      newline_ind += 1;
-    } else if (newline_ind == 2) {
-      text_file << '\n';
-      newline_ind = 0;
+    int newline_ind = 0;
+    for (auto text : data) {
+      text_file << text << " ";
+      if (text == "NEW_LINE_IND") {
+        newline_ind += 1;
+      } else if (newline_ind == 1) {
+        newline_ind += 1;
+      } else if (newline_ind == 2) {
+        text_file << '\n';
+        newline_ind = 0;
+      }
     }
   }
- }
 
- 
-
- 
- 
- //Main function of the tree which asks users to think of an animal
+  // Main function of the tree which asks users to think of an animal
   void question() {
-    std::cout << "****************************************************" << '\n';
+    std::cout << "***********************************************" << '\n';
     std::cout << "Think of an animal and I will try to guess it" << '\n';
-    std::cout << "****************************************************" << '\n';
+    std::cout << "***********************************************" << '\n'
+              << '\n';
 
     std::shared_ptr<Node> curr = root_;
 
     std::vector<bool> path;
-
-    
 
     while (true) {
       if (curr->animal == true) {
@@ -136,15 +142,10 @@ class Animal_Tree {
     }
   }
 
-
-
-
-
  private:
   std::shared_ptr<Node> root_ = nullptr;
   std::vector<std::string> data_in;
   std::vector<std::string> data;
- 
 
   // helper functions
 
@@ -176,20 +177,17 @@ class Animal_Tree {
       } else {
         data.push_back("left");
       }
-    } 
+    }
 
     data.push_back("NEW_LINE_IND");
     data.push_back(animal);
     data.push_back(question);
 
     add(animal, question, node, direction);
-    std::cout << "***Animal and question added to game***" << '\n';
+    std::cout << "Animal and question added to game" << '\n' << '\n';
   }
 
-  
- 
-
- //Adds an animal and a question to the tree
+  // Adds an animal and a question to the tree
   void add(std::string animal, std::string question, std::shared_ptr<Node> node,
            std::string direction) {
     if (direction == "left") {
