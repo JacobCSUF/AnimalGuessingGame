@@ -59,5 +59,4 @@ left right left left right right right left NEW_LINE_IND Sloth Are_their_ears_hi
 right right left left left left NEW_LINE_IND Owl Do_they_hoot 
 right right left right right left NEW_LINE_IND Flamingo Are_they_bright_colored 
 left right right right right left NEW_LINE_IND Pig Is_it_pink 
-right right left right right left left NEW_LINE_IND Peacock Are_they_very_brightly_colored 
-
+right right left right right left left NEW_LINE_IND Peacock Are_they_very_brightly_colored

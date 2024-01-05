@@ -26,41 +26,42 @@ class Animal_Tree {
     root_->left_child_->animal = true;
   }
 
-  // Loads the tree with information from a text file
+  // Loads the animal tree with information from a text file
+  // The location of each question/animal is determined by its
+  // "left" and "right" sequence on the database
   void load_data() {
     std::ifstream path_desript{"data.txt"};
-
-    std::shared_ptr<Node> curr = root_;
-
     std::string info;
-    while (path_desript) {
+
+    // Push back all the information on the database to be used in determining
+    // where each question/animal node goes
+    while (path_desript.good()) {
       path_desript >> info;
-
-      data_in.push_back(info);
+      data_in_.push_back(info);
     }
 
-    if (data_in.size() != 0) {
-      for (int i = 0; i < data_in.size(); i++) {
-        data.push_back(data_in.at(i));
-      }
-    }
-
-    for (int i = 0; i < data_in.size(); i++) {
-      if ((data_in.at(i) == "right") && (curr->right_child_ != nullptr)) {
+    // If the node goes right or left traverse there
+    std::shared_ptr<Node> curr = root_;
+    for (int i = 0; i < data_in_.size(); i++) {
+      if ((data_in_.at(i) == "right") && (curr->right_child_ != nullptr)) {
         curr = curr->right_child_;
       }
 
-      if ((data_in.at(i) == "left") && (curr->left_child_ != nullptr)) {
+      if ((data_in_.at(i) == "left") && (curr->left_child_ != nullptr)) {
         curr = curr->left_child_;
       }
-      if (data_in.at(i) == "NEW_LINE_IND") {
-        if (curr->left_child_ != nullptr) {
-          add(data_in.at(i + 1), data_in.at(i + 2), curr, "right");
-        } else {
-          add(data_in.at(i + 1), data_in.at(i + 2), curr, "left");
-        }
 
-        curr = root_;
+      // "New_LINE_IND" indicates that the the curr node
+      // reached the location where the question/animal should be
+      // and that they can now be added to the tree
+
+      if (data_in_.at(i) == "NEW_LINE_IND") {
+        if (curr->left_child_ != nullptr) {
+          add(data_in_.at(i + 1), data_in_.at(i + 2), curr, "right");
+        } else {
+          add(data_in_.at(i + 1), data_in_.at(i + 2), curr, "left");
+        }
+ curr = root_;
       }
     }
   }
@@ -69,14 +70,8 @@ class Animal_Tree {
   // file for future session
   void put_new_questions_in_data_base() {
     std::ofstream text_file{"data.txt"};
-    if (data_in.size() != 0) {
-      for (int i = 0; i > data_in.size(); i++) {
-        data.push_back(data_in.at(i));
-      }
-    }
-
     int newline_ind = 0;
-    for (auto text : data) {
+    for (auto text : data_in_) {
       text_file << text << " ";
       if (text == "NEW_LINE_IND") {
         newline_ind += 1;
@@ -95,46 +90,55 @@ class Animal_Tree {
     std::cout << "Think of an animal and I will try to guess it" << '\n';
     std::cout << "***********************************************" << '\n'
               << '\n';
-
     std::shared_ptr<Node> curr = root_;
-
     std::vector<bool> path;
-
     while (true) {
+      
+      // If the current node is an animal ask the user if they are thinking of
+      // whatever the animal on the node it
       if (curr->animal == true) {
         std::cout << "Is the animal a " << curr->value_
                   << "? (y) for yes, (n) for no" << '\n';
-
         std::string answer;
         std::cin >> answer;
 
+        // If the animal is correct end the current game
         if (answer == "y") {
           std::cout << "I KNEW IT. THANKS FOR PLAYING!" << '\n';
           return;
-        } else {
-          // INPUTING DATA ON DATABASE
 
-          insert_data(path, "no", curr);
-
+          // If the animal isn't correct input the new animal and question in
+          // the game and on the database
+        } else if (answer == "n") {
+          insert_new_animal(path, "no", curr);
           return;
         }
       }
 
+      // If the current node is a question ask whether the question is yes or no
+      // for whatever animal the person is thinking of
       else {
         std::cout << curr->value_ << "? (y) for yes, (n) for no" << '\n';
         std::string answer;
         std::cin >> answer;
 
+        // If the answer is yes traverse to the left child and idicate that the
+        // path is left on the database by pushing back true
         if (answer == "y") {
           curr = curr->left_child_;
           path.push_back(true);
+
+          // If the answer is no and there is no question/animal on the right
+          // child ask the user to input their animal and a question to go along
+          // with it or traverse to the right child if there is a
+          // question/animal
         } else if (answer == "n") {
           if (curr->right_child_ == nullptr) {
-            // release path into database
-            insert_data(path, "yes", curr);
+            insert_new_animal(path, "yes", curr);
 
             return;
           }
+
           curr = curr->right_child_;
           path.push_back(false);
         }
@@ -144,14 +148,13 @@ class Animal_Tree {
 
  private:
   std::shared_ptr<Node> root_ = nullptr;
-  std::vector<std::string> data_in;
-  std::vector<std::string> data;
+  std::vector<std::string> data_in_;
 
   // helper functions
 
-  // inserts path of yes/no question to animal in a vector
-  void insert_data(std::vector<bool> path, std::string right,
-                   std::shared_ptr<Node> node) {
+  // inserts path of yes/no questions to animal in a vector
+  void insert_new_animal(std::vector<bool> path, std::string right,
+                         std::shared_ptr<Node> node) {
     std::cout << "This animal has not been added yet. What animal were "
                  "you thinking of? "
               << '\n';
@@ -173,15 +176,15 @@ class Animal_Tree {
 
     for (auto move : path) {
       if (move == false) {
-        data.push_back("right");
+        data_in_.push_back("right");
       } else {
-        data.push_back("left");
+        data_in_.push_back("left");
       }
     }
 
-    data.push_back("NEW_LINE_IND");
-    data.push_back(animal);
-    data.push_back(question);
+    data_in_.push_back("NEW_LINE_IND");
+    data_in_.push_back(animal);
+    data_in_.push_back(question);
 
     add(animal, question, node, direction);
     std::cout << "Animal and question added to game" << '\n' << '\n';
