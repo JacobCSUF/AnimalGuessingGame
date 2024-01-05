@@ -17,6 +17,8 @@ class Node {
   bool animal = false;
 };
 
+
+
 class Animal_Tree {
  public:
   // Initializes tree with a question and an animal
@@ -66,6 +68,8 @@ class Animal_Tree {
     }
   }
 
+  
+  
   // Save any new questions/animals it learned during current session onto text
   // file for future session
   void put_new_questions_in_data_base() {
@@ -84,6 +88,8 @@ class Animal_Tree {
     }
   }
 
+  
+  
   // Main function of the tree which asks users to think of an animal
   void question() {
     std::cout << "***********************************************" << '\n';
@@ -146,10 +152,15 @@ class Animal_Tree {
     }
   }
 
+
+
+
  private:
   std::shared_ptr<Node> root_ = nullptr;
   std::vector<std::string> data_in_;
 
+ 
+ 
   // helper functions
 
   // inserts path of yes/no questions to animal in a vector
@@ -190,6 +201,8 @@ class Animal_Tree {
     std::cout << "Animal and question added to game" << '\n' << '\n';
   }
 
+  
+  
   // Adds an animal and a question to the tree
   void add(std::string animal, std::string question, std::shared_ptr<Node> node,
            std::string direction) {

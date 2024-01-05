@@ -3,11 +3,14 @@
 #include "animal_tree.h"
 
 int main() {
-  Animal_Tree tree("Lizard", "Does it have 4 limbs");
+  // Don't change this if using the load_data() function below
+  Animal_Tree tree("Lizard", "Does_it_have_4_limbs");
 
+  // Remove this function if you want to have the animal tree be empty
   tree.load_data();
+
   while (true) {
-    std::cout << "Enter any key to play or type (n) if your done: \n \n";
+    std::cout << "Enter any key to play or type (n) if your done: \n";
     std::string str;
     std::cin >> str;
 
