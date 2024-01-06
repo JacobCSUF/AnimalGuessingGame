@@ -37,8 +37,7 @@ class Animal_Tree {
 
     // Push back all the information on the database to be used in determining
     // where each question/animal node goes
-    while (path_desript.good()) {
-      path_desript >> info;
+    while (path_desript >> info) {
       data_in_.push_back(info);
     }
 
