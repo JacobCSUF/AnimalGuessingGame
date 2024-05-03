@@ -8,7 +8,7 @@ left right right NEW_LINE_IND Horse Do_we_ride_it
 right NEW_LINE_IND Shark Can_it_only_breath_in_water 
 right right NEW_LINE_IND Bird Can_it_fly 
 right right left NEW_LINE_IND Pigeon Is_their_head_usually_dark/black 
-right right left left NEW_LINE_IND crow Are_they_somewhat_spooky 
+right right left left NEW_LINE_IND crow Can_they_be_considered_spooky 
 right left NEW_LINE_IND Dolphin Are_they_safe_to_be_around 
 left left left NEW_LINE_IND Bear Are_usually_black/dark_in_color 
 left left left right NEW_LINE_IND Tiger Is_it_covered_in_stripes 
@@ -26,14 +26,14 @@ left right left left right NEW_LINE_IND Squirl Do_they_have_big_fluffy_tails
 right right right NEW_LINE_IND Ostrich Is_it_very_fast 
 left right left right right left NEW_LINE_IND Fox Does_it_have_normal_sized_tail 
 left right right right left NEW_LINE_IND Armadillo Do_they_only_live_on_land 
-right left right NEW_LINE_IND Eel Is_it_poisonous_or_venomous
+right left right NEW_LINE_IND Eel Is_it_poisonous_or_venomous 
 right right left right right NEW_LINE_IND Goose Do_we_not_usually_eat_them 
 left left left right right right NEW_LINE_IND Wolf Are_they_related_to_dogs 
 left right left left right right NEW_LINE_IND Gorilla Are_they_very_big 
 left right left right right left right NEW_LINE_IND Beaver Do_they_live_near_water 
 left right left left right right left NEW_LINE_IND Orangutan Are_they_slow 
 left right left right left NEW_LINE_IND Antelope Do_people_hunt_them_usually 
-right right left left left NEW_LINE_IND Bat Do_they_live_in_the_dark 
+right right left left left NEW_LINE_IND Bat Are_they_nocturnal 
 left right left right right left left NEW_LINE_IND Badger Do_they_have_a_stripe_on_their_head 
 left right left right right right NEW_LINE_IND Giraffe Do_they_mainly_eat_plants 
 right right right right NEW_LINE_IND crab Does_it_live_on_water_and_land 
@@ -65,3 +65,5 @@ left right left right right left left right NEW_LINE_IND Dog Are_they_a_common_p
 left right left right right right left left NEW_LINE_IND Horse Does_it_rhyme_with_morse 
 left right right right right left right NEW_LINE_IND Giraffe Does_it_have_a_long_neck 
 right left right left left NEW_LINE_IND Octopus Does_it_usually_have_8_legs 
+left right left right right left right right right NEW_LINE_IND Skunk Do_humans_commonly_avoid_them 
+left right right right right right right left NEW_LINE_IND Bird Does_it_fly 

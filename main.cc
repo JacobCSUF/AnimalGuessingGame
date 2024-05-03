@@ -4,7 +4,7 @@
 
 int main() {
   // Don't change this if using the load_data() function below
-  Animal_Tree tree("Lizard", "Does_it_have_4_limbs");
+  Animal_Tree tree("Lizard", "Does_it_have_4_legs");
 
   // Remove this function if you want to have the animal tree be empty
   tree.load_data();
